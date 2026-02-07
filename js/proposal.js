@@ -284,12 +284,6 @@ function handleYesClick() {
         ">
             <h3 style="color: white; margin-bottom: 15px; font-size: 2rem;">Happy Valentine's Day, chat! 💖</h3>
             <p style="color: white; font-size: 1.2rem; margin-bottom: 20px;">Thank you for being my everything! 🌟</p>
-            <div style="margin-top: 25px;">
-                <p style="color: white; font-style: italic;">I love you very very much!💕</p>
-                <button onclick="playAgain()" class="btn btn-valentine" style="margin-top: 15px;">
-                    Experience Our Love Story Again 🔄
-                </button>
-            </div>
         </div>
     `;
     
