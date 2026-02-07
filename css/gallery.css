@@ -1,0 +1,107 @@
+/* ===== POLAROID GALLERY ===== */
+#polaroid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.polaroid {
+    background: var(--white);
+    padding: 15px 15px 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px var(--soft-shadow);
+    transform: rotate(-3deg) translateY(20px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: float 4s ease-in-out infinite;
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.polaroid.animate-in {
+    opacity: 1;
+    transform: rotate(-2deg) translateY(0);
+}
+
+.polaroid:nth-child(2n) {
+    transform: rotate(2deg) translateY(20px);
+}
+
+.polaroid:nth-child(2n).animate-in {
+    transform: rotate(2deg) translateY(0);
+}
+
+.polaroid:nth-child(3n) {
+    transform: rotate(-1deg) translateY(20px);
+}
+
+.polaroid:nth-child(3n).animate-in {
+    transform: rotate(-1deg) translateY(0);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.08) translateY(-10px);
+    box-shadow: 0 20px 40px var(--soft-shadow);
+    z-index: 10;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.polaroid:hover img {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+.polaroid-caption {
+    font-family: var(--pixelated-font);
+    text-align: center;
+    margin-top: 12px;
+    font-style: italic;
+    color: var(--deep-pink);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.polaroid:hover .polaroid-caption {
+    color: var(--primary-pink);
+    transform: scale(1.05);
+}
+
+/* Polaroid floating animations with different delays */
+.polaroid:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.polaroid:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.polaroid:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.polaroid:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.polaroid:nth-child(5) {
+    animation-delay: 1.5s;
+}
+
+.polaroid:nth-child(6) {
+    animation-delay: 2.5s;
+}

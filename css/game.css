@@ -1,0 +1,65 @@
+/* ===== GAME STYLES ===== */
+#game-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px var(--soft-shadow);
+    max-width: 1320px;
+    margin: 0 auto;
+    overflow: hidden; /* Clip content to container boundaries */
+}
+
+#game-canvas {
+    width: 100%;
+    height: 720px;
+    max-width: 1280px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Ensure canvas content is clipped */
+}
+
+#game-ui {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--deep-pink);
+    font-weight: bold;
+    font-family: var(--pixelated-font);
+    pointer-events: none; /* Prevent UI from blocking game interactions */
+}
+
+.score {
+    font-family: var(--pixelated-font);
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px var(--soft-shadow);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    pointer-events: auto;
+}
+
+.instructions {
+    font-family: var(--pixelated-font);
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px var(--soft-shadow);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    pointer-events: auto;
+}

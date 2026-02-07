@@ -4,29 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi, Chat!</title>
-    
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Three.js Background Canvas -->
     <canvas id="background-canvas"></canvas>
-    
-    <!-- Main Content Container -->
     <div class="content-wrapper">
-        
-        <!-- Memory Lane Section -->
         <section id="memory-lane" class="section active">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                         <h1 class="section-title">Random memories with you!💕</h1>
                         <p class="section-subtitle">Before we start the fun part....</p>
-                        
-                        <!-- Polaroid Gallery -->
                         <div id="polaroid-gallery" class="mt-5">
                             <div class="polaroid" data-delay="0">
                                 <img src="assets/images/1.png" alt="Marikina">
@@ -62,13 +51,11 @@
             </div>
         </section>
         
-        <!-- Game Section -->
         <section id="game-section" class="section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div id="game-container">
-                            <!-- Three.js Game Canvas -->
                             <canvas id="game-canvas" width="1280" height="720"></canvas>
                             <div id="game-ui">
                                 <div class="score">Hearts Collected: <span id="score">0</span>/10</div>
@@ -80,7 +67,6 @@
             </div>
         </section>
         
-        <!-- Proposal Section -->
         <section id="proposal-section" class="section">
             <div class="container">
                 <div class="row justify-content-center align-items-center min-vh-100">
@@ -97,10 +83,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-        
+        </section>        
     </div>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
@@ -114,6 +99,5 @@
     <script src="js/mobile.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 </html>

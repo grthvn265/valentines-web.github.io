@@ -1,5 +1,3 @@
-// ===== VALENTINE'S BACKGROUND MUSIC SYSTEM =====
-
 let audioState = {
     backgroundMusic: null,
     isMuted: false,
@@ -18,13 +16,32 @@ let audioState = {
     ]
 };
 
-// ===== AUDIO SYSTEM INITIALIZATION =====
 function initAudioSystem() {
-    // Create audio controls UI
     createAudioControls();
-    
-    // Initialize background music
     initBackgroundMusic();
+    
+    // Autoplay logic: Try to play immediately, fallback to user interaction
+    if (audioState.backgroundMusic) {
+        const playPromise = audioState.backgroundMusic.play();
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                audioState.isPlaying = true;
+                updateAudioUI();
+            }).catch(error => {
+                console.log("Autoplay prevented. Waiting for user interaction...");
+                // Add interaction listener
+                const startAudio = () => {
+                    playBackgroundMusic();
+                    document.removeEventListener('click', startAudio);
+                    document.removeEventListener('touchstart', startAudio);
+                    document.removeEventListener('keydown', startAudio);
+                };
+                document.addEventListener('click', startAudio);
+                document.addEventListener('touchstart', startAudio);
+                document.addEventListener('keydown', startAudio);
+            });
+        }
+    }
     
     console.log('🎵 Background music system initialized!');
 }
@@ -76,7 +93,6 @@ function createAudioControls() {
     
     document.body.appendChild(audioControls);
     
-    // Add CSS for audio buttons
     const audioStyle = document.createElement('style');
     audioStyle.innerHTML = `
         .audio-btn {
@@ -106,8 +122,6 @@ function createAudioControls() {
         }
     `;
     document.head.appendChild(audioStyle);
-    
-    // Set up event listeners
     setupAudioControls();
 }
 

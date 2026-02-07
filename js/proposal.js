@@ -221,19 +221,12 @@ function handleNoClick(event) {
     ];
     
     if (proposalState.clickCount < messages.length) {
-        // Change the button text to be more pleading
         noButton.textContent = messages[proposalState.clickCount - 1];
-        
-        // Make the button smaller and sadder
         noButton.style.transform = `scale(${Math.max(0.7, 1 - proposalState.clickCount * 0.1)})`;
         noButton.style.backgroundColor = '#ffb3ba';
         noButton.style.borderColor = '#ff8a95';
-        
-        // Sad particle effect
         createSadParticleEffect();
-        
     } else {
-        // After many clicks, give in gracefully
         noButton.innerHTML = '😭 Fine... maybe? 🤔';
         noButton.style.backgroundColor = '#ffd1dc';
         
@@ -245,17 +238,12 @@ function handleNoClick(event) {
     }
 }
 
-// ===== TASK 4.3: THE "YES" CELEBRATION =====
 function handleYesClick() {
-    // Stop any evasion
     proposalState.isEvading = false;
-    
-    // Play celebration sound
     if (typeof playSound === 'function') {
         playSound('confetti');
     }
     
-    // Multiple confetti bursts
     const celebrationSequence = [
         { delay: 0, particleCount: 100, spread: 70, origin: { y: 0.6 } },
         { delay: 200, particleCount: 50, spread: 60, origin: { y: 0.7, x: 0.2 } },
@@ -274,12 +262,10 @@ function handleYesClick() {
         }, burst.delay);
     });
     
-    // Fireworks effect
     setTimeout(() => {
         createFireworksEffect();
     }, 800);
     
-    // Update the proposal content
     const proposalTitle = document.querySelector('.proposal-title');
     const proposalButtons = document.querySelector('.proposal-buttons');
     
@@ -296,10 +282,10 @@ function handleYesClick() {
             margin-top: 30px;
             box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
         ">
-            <h3 style="color: white; margin-bottom: 15px; font-size: 2rem;">Happy Valentine's Day, my love! 💖</h3>
+            <h3 style="color: white; margin-bottom: 15px; font-size: 2rem;">Happy Valentine's Day, chat! 💖</h3>
             <p style="color: white; font-size: 1.2rem; margin-bottom: 20px;">Thank you for being my everything! 🌟</p>
             <div style="margin-top: 25px;">
-                <p style="color: white; font-style: italic;">You completed the journey through our memories and won my heart all over again! 💕</p>
+                <p style="color: white; font-style: italic;">I love you very very much!💕</p>
                 <button onclick="playAgain()" class="btn btn-valentine" style="margin-top: 15px;">
                     Experience Our Love Story Again 🔄
                 </button>
@@ -307,7 +293,6 @@ function handleYesClick() {
         </div>
     `;
     
-    // Add rainbow animation CSS
     if (!document.getElementById('rainbow-style')) {
         const style = document.createElement('style');
         style.id = 'rainbow-style';
@@ -331,9 +316,7 @@ function handleYesClick() {
     }
 }
 
-// ===== SPECIAL EFFECTS =====
 function createSadParticleEffect() {
-    // Create crying effect with blue teardrops
     for (let i = 0; i < 5; i++) {
         setTimeout(() => {
             confetti({

@@ -1,0 +1,11 @@
+:root {
+    --primary-pink: #ff6b9d;
+    --secondary-pink: #ffc3e1;
+    --accent-pink: #ff8fab;
+    --deep-pink: #e91e63;
+    --light-pink: #ffeef6;
+    --white: #ffffff;
+    --soft-shadow: rgba(255, 107, 157, 0.3);
+    --gradient-valentine: linear-gradient(135deg, var(--primary-pink), var(--accent-pink));
+    --pixelated-font: 'Pixelify Sans', 'Courier New', monospace;
+}

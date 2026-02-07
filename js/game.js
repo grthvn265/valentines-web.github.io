@@ -67,17 +67,17 @@ function initGameScene() {
         throw new Error('Game canvas not found!');
     }
     
-    console.log('🎮 Canvas found:', canvas.width, 'x', canvas.height);
+    // Get actual display dimensions from CSS
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
     
-    // Use explicit 1280x720 dimensions for consistency
-    const gameWidth = 1280;
-    const gameHeight = 720;
+    console.log('🎮 Canvas initial dimensions:', width, 'x', height);
     
     // Create game scene, camera, and renderer
     gameScene = new THREE.Scene();
     
-    // Optimized camera for 16:9 widescreen gaming
-    gameCamera = new THREE.PerspectiveCamera(60, gameWidth / gameHeight, 0.1, 1000);
+    // Dynamic camera for responsive gaming
+    gameCamera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
     gameRenderer = new THREE.WebGLRenderer({ 
         canvas: canvas,
         alpha: true,
@@ -85,14 +85,13 @@ function initGameScene() {
         premultipliedAlpha: false
     });
     
-    gameRenderer.setSize(gameWidth, gameHeight);
+    gameRenderer.setSize(width, height, false); // false = do not update style (since CSS handles it)
     gameRenderer.setClearColor(0x000000, 0); // Completely transparent background
     
-    // Camera positioned for optimal centering in 1280x720 canvas
+    // Camera positioned for optimal centering
     gameCamera.position.set(0, 2.5, 6);
     gameCamera.lookAt(0, -1, -6);
     
-    console.log('🎮 Game initialized at 1280x720 resolution');
     console.log('🎮 Game scene initialized successfully');
 }
 

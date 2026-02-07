@@ -1,0 +1,28 @@
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .proposal-title {
+        font-size: 2.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    #game-canvas {
+        height: 450px; /* Reduced height for mobile while maintaining aspect ratio */
+    }
+    
+    .proposal-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .proposal-buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}

@@ -1,0 +1,99 @@
+/* ===== GLOBAL STYLES & RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ithaca', 'Pixelated Elegance', 'Stepalange', 'Courier New', monospace;
+    background: var(--light-pink);
+    overflow-x: hidden;
+    color: var(--deep-pink);
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/KittyCursor.cur'), auto;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--pixelated-font);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+}
+
+p, span, div, button, input, textarea {
+    font-family: var(--pixelated-font);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: var(--gradient-valentine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px var(--soft-shadow);
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: var(--deep-pink);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.proposal-title {
+    font-family: var(--pixelated-font);
+    font-size: 4rem;
+    font-weight: bold;
+    background: var(--gradient-valentine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: heartbeat 2s ease-in-out infinite;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* ===== CUSTOM KITTY CURSOR STYLES ===== */
+button, .btn, .btn-valentine {
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/GrabbyPaw.cur'), pointer !important;
+}
+
+a, .clickable {
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/GrabbyPaw.cur'), pointer;
+}
+
+input, textarea {
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/Typing.cur'), text;
+}
+
+.loading, .waiting {
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/Loading.ani'), wait;
+}
+
+.polaroid:hover {
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/GrabbyPaw.cur'), pointer;
+}
+
+#no-btn {
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/NYO.cur'), pointer !important;
+}
+
+#game-canvas {
+    cursor: url('../assets/game/KittyCursorTheme/KittyCursorTheme/arrows1.cur'), crosshair;
+}
