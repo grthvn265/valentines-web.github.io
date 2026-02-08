@@ -1,6 +1,6 @@
 # 💕 Valentine's Day Interactive Website
 
-A romantic, fully-featured interactive website with 3D game, personalized photo gallery, smart music player, and playful proposal interaction. Built with HTML5, CSS3, Bootstrap 5, and Three.js.
+A romantic, fully-featured interactive website with a 3D game, a personalized photo gallery, a smart music player, and playful proposal interaction. Built with HTML5, CSS3, Bootstrap 5, and Three.js.
 
 ## ✨ Key Features
 
@@ -8,7 +8,6 @@ A romantic, fully-featured interactive website with 3D game, personalized photo 
 - Three.js powered 3D environment with 1280x720 canvas
 - Zigzag heart spawning patterns for dynamic gameplay  
 - Keyboard controls (←/→ arrow keys) for character movement
-- Custom heart.png sprites for background particles
 
 ### 🎵 **Smart Music Player**
 - Autoplay functionality with browser policy compliance
@@ -79,26 +78,6 @@ Valentines-Webn/
 - **Web Audio API**: Background music playback and controls
 - **Modular JavaScript**: Clean, maintainable ES6+ architecture
 
-## 🎯 Implementation Highlights
-
-### Game Engine
-- **Canvas Resolution**: Fixed 1280x720 for consistent experience
-
-- **Heart Spawning**: Random zigzag patterns for engaging gameplay
-
-### Audio System  
-- **Smart Autoplay**: Browser policy compliant with fallback to user interaction
-- **Progress Controls**: Click-to-seek functionality with real-time updates
-- **Visual Feedback**: Pink-themed UI with heart and flower icons
-- **Playlist Management**: Automatic track progression and shuffle support
-
-### UX Design
-- **Anti-Overlap Algorithm**: Prevents "No" button from blocking "Yes" button
-- **Smart Positioning**: 20-attempt algorithm with opposite-side fallback
-- **Progressive Interaction**: Escalating emotional responses to repeated "No" clicks
-- **Mobile Optimization**: Touch-friendly controls and responsive layouts
-- **Particle System**: 150 heart sprites with texture loading fallbacks
-
 ## 📚 JavaScript Modules
 
 - `main.js`: Application entry point and global state management
@@ -133,7 +112,7 @@ Valentines-Webn/
 1. **Clone or download** the project files
 2. **Add your photos** as 1.png through 6.png in `assets/images/`
 3. **Add music files** to `assets/audio/` (MP3 format recommended)
-4. **Open index.html** in a modern web browser
+4. **Open index.html** in a web browser
 5. **Enjoy** your personalized Valentine's experience!
 
 ## 🌟 Browser Compatibility
@@ -154,3 +133,4 @@ Valentines-Webn/
 - "Kitty Cursor" by **KagamiShea**
 
 *Built with love for Valentine's Day 2026* 💕  
+
